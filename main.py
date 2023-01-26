@@ -16,6 +16,16 @@ dp = Dispatcher(bot=bot, storage=storage)
 async def start(msg: types.Message):
     await msg.answer("Приветствую!!", reply_markup=keyboards.main_menu_reply()) 
 
+@dp.message_handler(lambda message: message.text == "Галерея")
+async def gallery(msg: types.Message):
+        media = types.MediaGroup()
+        media.attach_photo(types.InputFile('gallery/pic1.JPG'), 'Превосходная фотография')
+        media.attach_photo(types.InputFile('gallery/pic2.JPG'), 'Eще одна превосходная фотография')
+        await msg.answer_media_group(media=media)
+
+
+
+
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
