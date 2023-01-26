@@ -16,11 +16,11 @@ def main_menu_reply():
 
 def main_keyboard():
     keyboard = types.InlineKeyboardMarkup(row_width=3)
-    keyboard.add(types.InlineKeyboardButton(text="Галерея", callback_data="gallery"),
-    types.InlineKeyboardButton(text="Стек технологий", callback_data="techno"))
-    keyboard.add(types.InlineKeyboardButton(text="Чем могу быть полезен", callback_data="impact"))
-    keyboard.add(types.InlineKeyboardButton(text="Контакты", callback_data="contact"),
-    types.InlineKeyboardButton(text="Мои проекты", callback_data="projects"))
+    keyboard.add(types.InlineKeyboardButton(text="Галерея 🌅", callback_data="gallery"),
+    types.InlineKeyboardButton(text="Стек технологий 🎛", callback_data="techno"))
+    keyboard.add(types.InlineKeyboardButton(text="Чем могу быть полезен 💡", callback_data="impact"))
+    keyboard.add(types.InlineKeyboardButton(text="Контакты ☎️", callback_data="contact"),
+    types.InlineKeyboardButton(text="Мои проекты 🛠", callback_data="projects"))
 
     return keyboard
 
