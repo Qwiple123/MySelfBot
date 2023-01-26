@@ -4,6 +4,7 @@ from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram import Bot, Dispatcher, types, executor
+import keyboards
 TOKEN = '5913399795:AAEUP-slfC2rMUugkOoU0MEW_CnqnIrCezA'
 
 storage = MemoryStorage()
@@ -13,7 +14,7 @@ dp = Dispatcher(bot=bot, storage=storage)
 #class Dialog(StatesGroup:
 @dp.message_handler(commands='start')
 async def start(msg: types.Message):
-    await msg.answer("Приветствую в боте Avtosearch!") 
+    await msg.answer("Приветствую!!", reply_markup=keyboards.main_menu_reply()) 
 
 
 if __name__ == '__main__':
