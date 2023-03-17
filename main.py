@@ -5,7 +5,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram import Bot, Dispatcher, types, executor
 import keyboards
-TOKEN = '5913399795:AAEUP-slfC2rMUugkOoU0MEW_CnqnIrCezA'
+
 
 storage = MemoryStorage()
 bot = Bot(token = TOKEN)
